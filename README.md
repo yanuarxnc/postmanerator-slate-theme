@@ -21,13 +21,13 @@ Make sure you already throught [postmanerator installation](https://github.com/a
 
 Download theme from repository
 ```
-$ postmanerator themes get https://github.com/Bhinneka/postmanerator-slate-theme.git
+$ postmanerator -theme-local-name="slate" themes get https://github.com/Bhinneka/postmanerator-slate-theme.git
 ```
 
 Confirm that it is available on your local machine
 ```
 $ postmanerator themes list
-postmanerator-slate-theme
+slate
 default
 ```
 
@@ -35,7 +35,7 @@ Generate documentation
 ```
 $ postmanerator -collection=main.postman_collection.json \
 > -environment=local.postman_environment.json \
-> -theme=postmanerator-slate-theme -output=./build/index.html
+> -theme=slate -output=./build/index.html
 ```
 
 You can add your own logo in the generated documentation, just copy the `logo.png` file to the directory with the generated documentation (next to the `index.html`).
