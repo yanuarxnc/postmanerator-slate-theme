@@ -1,6 +1,6 @@
 # Slate - Postmanerator theme by Bhinneka
 
-![Slate preview](/preview.png?raw=true)
+![Slate preview](https://github.com/Bhinneka/postmanerator-slate-theme/blob/preview/preview.png?sanitize=true&raw=true)
 
 A [slate](https://github.com/lord/slate) theme for [Postmanerator](https://github.com/aubm/postmanerator).
 
@@ -27,7 +27,7 @@ $ postmanerator themes get https://github.com/Bhinneka/postmanerator-slate-theme
 Confirm that it is available on your local machine
 ```
 $ postmanerator themes list
-slate
+postmanerator-slate-theme
 default
 ```
 
@@ -35,7 +35,7 @@ Generate documentation
 ```
 $ postmanerator -collection=main.postman_collection.json \
 > -environment=local.postman_environment.json \
-> -theme=slate -output=./build/index.html
+> -theme=postmanerator-slate-theme -output=./build/index.html
 ```
 
 You can add your own logo in the generated documentation, just copy the `logo.png` file to the directory with the generated documentation (next to the `index.html`).
