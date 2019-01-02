@@ -1,8 +1,6 @@
 # Slate - Postmanerator theme by Bhinneka
 
-<div align="center">
-<img src="https://raw.githubusercontent.com/Bhinneka/postmanerator-slate-theme/master/preview.png" alt="Slate preview" />
-</div>
+![Slate preview](/preview.png?raw=true)
 
 A [slate](https://github.com/lord/slate) theme for [Postmanerator](https://github.com/aubm/postmanerator).
 
