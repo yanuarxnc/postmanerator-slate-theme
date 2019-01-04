@@ -25,7 +25,7 @@
 
     {{ range .Requests }}
       <li>
-        <a href="#request-{{ slugify .Name }}"><span class="req-{{ .Method }} text-lg toc-h1 toc-link">{{ .Method }}</span> {{ .Name }}</a>
+        <a href="#request-{{ slugify .Name }}" class="toc-h1 toc-link"><span class="req-{{ .Method }} text-lg">{{ .Method }}</span> {{ .Name }}</a>
       </li>
     {{ end }}
 
