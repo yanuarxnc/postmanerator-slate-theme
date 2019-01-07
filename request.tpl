@@ -2,9 +2,9 @@
 <div class="split">
   <div class="left">
     <div class="headling">
-      <h2 id="request-{{ slugify $req.Name }}">
-        {{ $req.Name }}
-        <a href="#request-{{ slugify $req.Name }}"><i class="glyphicon glyphicon-link"></i></a>
+      <h2 id="request-{{ slugify (printf "%v %v" $req.Method $req.Name) }}">
+        {{$req.Method}} {{ $req.Name }}
+        <a href="#request-{{ slugify (printf "%v %v" $req.Method $req.Name) }}"><i class="glyphicon glyphicon-link"></i></a>
       </h2>
 
       <div class="description">{{ markdown $req.Description }}</div>

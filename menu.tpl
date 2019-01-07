@@ -25,7 +25,7 @@
 
     {{ range .Requests }}
       <li>
-        <a href="#request-{{ slugify .Name }}" class="toc-h1 toc-link"><span class="req-{{ .Method }} text-lg">{{ .Method }}</span> {{ .Name }}</a>
+        <a href="#request-{{ slugify (printf "%v %v" .Method .Name) }}" class="toc-h1 toc-link"><span class="req-{{ .Method }} text-lg">{{ .Method }}</span> {{ .Name }}</a>
       </li>
     {{ end }}
 
@@ -35,8 +35,9 @@
         <a href="#folder-{{ slugify $folder.Name }}" class="toc-h1 toc-link">{{ $folder.Name }}</a>
         <ul class="toc-list-h2">
           {{ range $folder.Requests }}
+          {{ $name := (printf "%v %v" .Method .Name ) }}
             <li>
-              <a href="#request-{{ slugify $folder.Name }}-{{ slugify .Name }}" class="toc-h2 toc-link"><span class="req-{{ .Method }} text-lg">{{ .Method }}</span> {{ .Name }}</a>
+              <a href="#request-{{ slugify $folder.Name }}-{{ slugify $name }}" class="toc-h2 toc-link"><span class="req-{{ .Method }} text-lg">{{ .Method }}</span> {{ .Name }}</a>
             </li>
           {{ end }}
         </ul>

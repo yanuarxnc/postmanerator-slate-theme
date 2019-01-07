@@ -3,7 +3,7 @@
   <h1 id="folder-{{ slugify $folder.Name }}">
     {{ .Name }}
     <a href="#folder-{{ slugify $folder.Name }}"><i class="glyphicon glyphicon-link"></i></a>
-  </h3>
+  </h1>
 
   {{ markdown $folder.Description }}
 
@@ -13,9 +13,9 @@
     <div class="split">
       <div class="left">
         <div class="headling">
-          <h2 id="request-{{ slugify $folder.Name }}-{{ slugify $req.Name }}">
-            {{ $req.Name }}
-            <a href="#request-{{ slugify $folder.Name }}-{{ slugify $req.Name }}"><i class="glyphicon glyphicon-link"></i></a>
+          <h2 id="request-{{ slugify $folder.Name }}-{{ slugify (printf "%v %v" $req.Method $req.Name) }}">
+            {{ $req.Method }} {{ $req.Name }}
+            <a href="#request-{{ slugify $folder.Name }}-{{ slugify (printf "%v %v" $req.Method $req.Name) }}"><i class="glyphicon glyphicon-link"></i></a>
           </h2>
         </div>
 
